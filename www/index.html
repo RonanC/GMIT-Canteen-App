@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GMIT Canteen</title>
+	<!-- theme roller theme -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link rel="stylesheet" href="themes/canteenApp.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+	<!-- content delivery network, all files hosted online so we don;t have to download locally  -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="homePage" data-theme="e">
+		<div data-role="header">
+			<h1>GMIT Canteen</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#homePage" data-icon="home">Home</a></li>
+					<li><a href="#foodPage" data-icon="shop">Food</a></li>
+					<li><a href="#contactPage" data-icon="phone">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<!-- style="text-align: center;" -->
+			<h1>GMIT Catering Company</h1>
+			<p>GMIT Catering Company operates the canteen and cafes on the GMIT Galway Campus.</p>
+
+			<div data-role="collapsible">
+				<h1>The Food Zone</h1>
+				<p>The Food Zone is a canteen which specialises in providing fresh, and where possible locally sourced, breakfast, lunch and evening meals up to 7.30pm.  This includes:</p>
+				<ul>
+					<li>Self-service cooked breakfasts</li>
+					<li>Choice of hot main courses including carvery, fresh fish and vegetarian options</li>
+					<li>Healthy fruit and granola bar</li>
+					<li>Homemade scones</li>
+					<li>Fresh baked pastries and muffins</li>
+					<li>Ready-made and made-to-order sandwiches, wraps and paninis</li>
+					<li>Homemade soups</li>
+					<li>Extensive salad bar</li>
+					<li>Coffees/teas, water, minerals</li>
+					<li>Snacks, desserts and fresh fruit</li>
+				</ul>
+			</div>
+
+			<div data-role="collapsible">
+				<h1>Expresso Bar</h1>
+				<p>The espresso bar is a quick grab 'n' go cafe in the canteen, designed to offer a speedy service for those in a rush.  Offerings include:</p>
+				<ul>
+					<li>Barista coffee service</li>
+					<li>Speciality bean to cup coffee</li>
+					<li>Tea, minerals, juices and soup</li>
+					<li>Pastries, scones, fruit and chocolate bars</li>
+					<li>Pre-made sandwiches</li>
+					<li>Newspapers and ice-cream</li>
+				</ul>
+			</div>
+
+			<div data-role="collapsible">
+				<h1>The Cafe Foyer</h1>
+				<p>The Cafe Foyer, overlooking Galway Bay, is the ideal area to relax and read the paper over a cup of coffee, or to grab a quick snack.  Items include:</p>
+				<ul>
+					<li>Speciality bean to cup coffee</li>
+					<li>Tea, minerals, juices, and soup</li>
+					<li>Pastries, scones, pre-made sandwiches, fruit and chocolate bars</li>
+				</ul>
+			</div>
+
+		</div>
+		<div data-role="footer">
+			<h2>&copy; GMIT Canteen 2015</h2>
+		</div>
+	</div>
+
+	<!-- Food Shop Page -->
+	<div data-role="page" id="foodPage" data-theme="e">
+		<div data-role="header">
+			<h1>GMIT Canteen</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#homePage" data-icon="home">Home</a></li>
+					<li><a href="#foodPage" data-icon="shop">Food</a></li>
+					<li><a href="#contactPage" data-icon="phone">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h1>Make a Sandwich</h1>
+			<p>Select the various components for your sandwich below.</p>
+			<br>
+
+			<form action="form.php" method="post" data-mini="true">
+				<h3>Type:</h3>
+				<!-- data-mini="true" -->
+				<label><input type="radio" name="type" value="roll"/>Roll</label>
+				<label><input type="radio" name="type" value="wrap"/>Wrap</label>
+				<br>
+
+				<h3>Bread:</h3>
+				<label><input type="radio" name="bread" value="white"/>White</label>
+				<label><input type="radio" name="bread" value="brown"/>Brown</label>
+				<br>
+
+				<h3>Fillings:</h3>
+				<label><input type="checkbox" name="filling" value="Chicken"/>Chicken</label>
+				<label><input type="checkbox" name="filling" value="Cheese"/>Cheese</label>
+				<label><input type="checkbox" name="filling" value="Onion"/>Onion</label>
+				<label><input type="checkbox" name="filling" value="Lettuce"/>Lettuce</label>
+				<br>
+
+				<label for="comments"><h3>Comments</h3></label>
+				<textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter text here..."></textarea>
+				<br>
+
+				<label for="time"><h3>How many hours from now?</h3></label>
+				<input name="time" id="time" type="range" min="0" max="5" value="0"/>
+				<br><br>
+
+				<input name="confirm" id="confirm" type="submit" value="Confirm Order"/>		
+			</form>
+		</div>
+		<div data-role="footer">
+			<h2>&copy; GMIT Canteen 2015</h2>
+		</div>
+	</div>
+
+	<!-- this contact us div is waiting to be called by jquery -->
+	<div data-role="page" id="contactPage" data-theme="e">
+		<div data-role="header">
+			<h1>GMIT Canteen</h1>	
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#homePage" data-icon="home">Home</a></li>
+					<li><a href="#foodPage" data-icon="shop">Food</a></li>
+					<li><a href="#contactPage" data-icon="phone">Contact</a></li>
+				</ul>
+			</div>		
+		</div>
+		<div data-role="main" class="ui-content">
+			<h1>Contact us</h1>
+			<!-- <a href="#page1" data-transition="pop">Page 1</a> -->
+	
+			<div data-role="collapsible">
+				<h1>Contact Details</h1>
+				<p>The Cafe Foyer, overlooking Galway Bay, is the ideal area to relax and read the paper over a cup of coffee, or to grab a quick snack.  Items include:</p>
+				<ul>
+					<li>Phone: +353 91 <a href="tel:0035391751107">751107</a> / <a href="tel:0035391742407">742407</a></li>
+					<li>Email: <a href="mailto:cateringco@gmit.ie">GMIT Catering Company</a></li>
+					<li>Find us on <a href="https://www.facebook.com/GMITCateringCo">Facebook</a> for all our latest offers</li>
+				</ul>
+			</div>
+			<br>
+
+			<form action="form.php" method="post" data-mini="true">
+				<label for="essay">Tell us what you think</label>
+				<textarea name="essay" id="essay" cols="30" rows="10" placeholder="I think GMIT Canteen..."></textarea>
+
+				<label for="rate">Rate us out of 10</label>
+				<!-- HTML5 range tag -->
+				<input name="rate" id="rate" type="range" min="0" max="10" value="0"/>
+				<input name="go" id="go" type="submit" value="Rate my app!"/>	
+			</form>
+		</div>
+		<div data-role="footer">
+			<h2>&copy; GMIT Canteen 2015</h2>
+		</div>
+	</div>
+
+</body>
+</html>
